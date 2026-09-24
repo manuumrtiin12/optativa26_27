@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lenguaje de Marcas</title>
+</head>
+<body>
+
+    <h1>Lenguaje de Marcas</h1>
+
+    <script>
+
+        var practicas = parseInt(prompt("Cual es tu nota de practicas: "));
+        var examen = parseInt(prompt("Cual es tu nota del examen: "));
+        var comportamiento = parseInt(prompt("Cual es tu nota por comportamiento: "));
+
+        var notaMedia = (practicas + examen + comportamiento) / 3;
+
+        document.write("Tu nota media es " + notaMedia + " ");
+
+        if(notaMedia >=5) {
+
+            document.write("estas aprobado ¡ENHORABUENA!");
+        }
+
+        else{
+
+            document.write("has suspendido...");
+        }
+        
+
+    </script>
+    
+</body>
+</html>

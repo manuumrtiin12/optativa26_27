@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina!</title>
+</head>
+<body>
+
+    <script>
+
+        var intento1 = prompt("¿Quién es el pintor de las Meninas?");
+
+        if(intento1 != "Velazquez") {
+
+            var intento2 = prompt("Incorrecto ¿Quién es el pintor de las Meninas?");
+
+            if(intento2 != "Velazquez") {
+
+                var intento3 = prompt("Incorrecto, ultima oportunidad ¿Quién es el pintor de las Meninas?");
+            }
+            
+            else {document.write("Correcto!")}
+
+            if(intento3 != "Velazquez") {
+
+                document.write("Has perdido!")
+            }
+            
+        }
+
+        else {document.write("Correcto!")}
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Informatica</title>
+</head>
+<body>
+
+    <script>
+
+        var marca = prompt("Que marca es el ordenador: ");
+        var modelo = prompt("Que modelo es: ");
+
+        var precioTotal = 1000;
+        
+
+        if(marca == "MSI"  && modelo == "PRESTIGE" ) {
+            
+            precioDescuento = 1000 * 0.05;
+            precioTotal = precioTotal - precioDescuento;
+
+        }
+
+        else if(marca == "HP"  && modelo == "PAVILION" ){
+
+            precioDescuento = 1000 * 0.1;
+            precioTotal =precioTotal - precioDescuento;
+            
+
+        }
+
+        document.write("Tu ordenador: " + marca + " Modelo " + modelo + " te a costado: " + precioTotal);
+
+    </script>
+    
+</body>
+</html>

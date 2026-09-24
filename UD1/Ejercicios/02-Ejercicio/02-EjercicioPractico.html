@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <script>
+
+        var numeroTabla = Number(prompt("Dime un numero para conocer su tabla de multiplicar"));
+        var numeroContador = 0;
+        
+        while (numeroContador < 10) {
+
+            numeroContador++;
+
+            document.write(
+                numeroTabla + " * " + numeroContador + " = " + 
+                (numeroContador * numeroTabla) + "<br>"
+            );
+        }
+
+    </script>
+    
+</body>
+</html>
