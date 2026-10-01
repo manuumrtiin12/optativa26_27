@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <script>
+
+        var num1 = prompt("Dame el primer numero: ");
+        var num2 = prompt("Dame el segundo numero: ");
+        var num3 = prompt("Dame el tercero numero: ");
+        var num4 = prompt("Dame el cuarto numero: ");
+        var num5 = prompt("Dame el quinto numero: ");
+
+        var cadena = new Array();
+
+        cadena.push(num1);
+        cadena.push(num2);
+        cadena.push(num3);
+        cadena.push(num4);
+        cadena.push(num5);
+
+        var contador = cadena.length - 1;
+
+        document.write(cadena.reverse());
+
+        var algoNuevo = prompt("Dame el otro elemento para añadir: ");
+        contador.push(algoNuevo);
+
+    </script>
+    
+</body>
+</html>

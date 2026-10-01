@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <script>
+
+        var texto = prompt("Dame un texto: ");
+
+        document.write("Tamaño completo de la cadena: " + texto.length);
+        document.write(" ")
+        document.write("Caracter en la posicion 8: " + texto[8]);
+        document.write(" ")
+
+        if (texto.includes("t")) {
+            document.write("La letra T se encuentra en la cadena");
+            document.write(" ")
+
+        }
+
+        document.write(texto.toUpperCase());
+        document.write(" ")
+        document.write(texto.toLowerCase());
+
+    </script>
+
+</body>
+</html>
