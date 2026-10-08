@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>LISTA DE LA COMPRA</h1>
+    
+    <button onclick= añadirProducto() >Añadir producto</button>
+    <button onclick= actualizarLista() >Actualizar lista</button>
+    <script>
+
+        var productos = [];
+
+        function añadirProducto() {
+
+            var productoAñadir = prompt("Dime el producto que quieres añadir: ")
+            productos.push(productoAñadir)
+        }
+
+        function actualizarLista() {
+
+            productos.forEach(function (producto) {
+
+                document.write(producto)
+
+            })
+                
+        }
+
+    </script>
+</body>
+</html>

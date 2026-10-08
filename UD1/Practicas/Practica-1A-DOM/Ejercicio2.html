@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <ul>
+        <li>
+            <a href="https://www.google.com"
+               onclick="mostrarDireccion(this.href); return false;">
+                Google
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.youtube.com"
+               onclick="mostrarDireccion(this.href); return false;">
+                YouTube
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.wikipedia.org"
+               onclick="mostrarDireccion(this.href); return false;">
+                Wikipedia
+            </a>
+        </li>
+    </ul>
+
+    <input type="text" id="direccion" readonly>
+
+    <script>
+        function mostrarDireccion(url) {
+            document.getElementById("direccion").value = url;
+        }
+    </script>
+
+</body>
+</html>

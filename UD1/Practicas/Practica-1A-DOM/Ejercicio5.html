@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+
+<body>
+
+    <p>Ciudad: <span id="ciudad"></span></p>
+    <p>Gastos de envío: <span id="gastos"></span></p>
+    <h1 id="fechaEnvio">Fecha de envío: <span id="fecha"></span></h1>
+
+    <script>
+
+        function cambios() {
+
+            let ciudades_gratis = ["Sevilla", "Madrid", "Valencia", "Barcelona"];
+            let ciudades_gastos = ["Cantabria", "Pontevedra", "Toledo", "Segovia"];
+
+            let ciudadUsuario = prompt("Introduce la ciudad:");
+
+            document.getElementById("ciudad").textContent = ciudadUsuario;
+
+            let fechaActual = new Date();
+
+            let dia = fechaActual.getDate();
+            let mes = fechaActual.getMonth() + 1;
+            let año = fechaActual.getFullYear();
+
+            let fecha = dia + "/" + mes + "/" + año;
+
+            if (ciudades_gastos.includes(ciudadUsuario)) {
+
+                let gastosUsuario = prompt("Introduce los gastos de envío:");
+
+                document.getElementById("gastos").textContent =
+                    "Gastos de envío: " + gastosUsuario + "€ - Fecha: " + fecha;
+
+                document.getElementById("fecha").textContent = fecha;
+
+            } 
+            else if (ciudades_gratis.includes(ciudadUsuario)) {
+
+                document.getElementById("gastos").textContent =
+                    "Los gastos de envío son gratuitos - Fecha: " + fecha;
+
+                document.getElementById("fecha").textContent = fecha;
+
+            } 
+            else {
+
+                document.getElementById("gastos").textContent =
+                    "No se pueden realizar envíos a esta ciudad.";
+
+                document.getElementById("fechaEnvio").style.display = "none";
+            }
+        }
+
+        window.onload = cambios;
+
+    </script>
+
+</body>
+</html>

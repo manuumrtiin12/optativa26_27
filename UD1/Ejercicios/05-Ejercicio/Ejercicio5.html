@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <button id="aceptar">Aceptar</button>
+    <button id="cancelar">Cancelar</button>
+
+    <script>
+
+        function aceptar() { 
+            document.write("<p>Está usted aceptado</p>");
+        }
+
+        function cancelar() {
+            document.write("<p>Está usted cancelado</p>");
+        }
+
+        document.getElementById("aceptar").onclick = aceptar;
+        document.getElementById("cancelar").onclick = cancelar;
+
+    </script>
+
+</body>
+</html>

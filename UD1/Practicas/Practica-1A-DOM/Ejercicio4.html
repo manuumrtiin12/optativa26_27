@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <p>Ciudad: <span id="ciudad"></span></p>
+    <p>Gastos de envío: <span id="gastos"></span></p>
+    <h1>Fecha de envío: <span id="fecha"></span></h1>
+
+    <script>
+
+        function cambios() {
+
+            let ciudadUsuario = prompt("Introduce la ciudad:");
+
+            let gastosUsuario = prompt("Introduce los gastos de envío:");
+
+            document.getElementById("ciudad").textContent = ciudadUsuario;
+            document.getElementById("gastos").textContent = gastosUsuario + "€";
+
+            let fechaActual = new Date();
+
+            let dia = fechaActual.getDate();
+            let mes = fechaActual.getMonth() + 1;
+            let año = fechaActual.getFullYear();
+
+            document.getElementById("fecha").textContent =
+                dia + "/" + mes + "/" + año;
+        }
+
+        window.onload = cambios;
+
+    </script>
+    
+</body>
+</html>

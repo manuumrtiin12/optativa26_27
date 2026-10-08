@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+
+<body>
+
+    <p>
+        JavaScript es un lenguaje de programación que los desarrolladores
+        utilizan para hacer páginas web interactivas. Desde actualizar fuentes
+        de redes sociales a mostrar animaciones y mapas interactivos, las
+        funciones de JavaScript pueden mejorar la experiencia del usuario de
+        un sitio web. Como lenguaje de scripting del lado del servidor, se
+        trata de una de las principales tecnologías de la World Wide Web.
+    </p>
+
+    <p id="parrafo2" style="display: none;">
+        Anteriormente, las páginas web eran estáticas, similares a las páginas
+        de un libro. Una página estática mostraba principalmente información
+        en un diseño fijo y no todo aquello que esperamos de un sitio web
+        moderno. JavaScript surgió como una tecnología del lado del navegador
+        para hacer que las aplicaciones web fueran más dinámicas.
+    </p>
+
+    <p id="parrafo3" style="display: none;">
+        Todos los lenguajes de programación funcionan mediante la traducción de
+        sintaxis similar a la del inglés a código de máquina, que posteriormente
+        el sistema operativo se encarga de ejecutar. JavaScript se clasifica
+        principalmente como un lenguaje de scripting o interpretado. El código
+        JavaScript es interpretado mediante un motor de JavaScript.
+    </p>
+
+    <span onclick="mostrar()">Mostrar más...</span>
+
+    <script>
+
+        function mostrar() {
+
+            let parrafo2 = document.getElementById("parrafo2");
+            let parrafo3 = document.getElementById("parrafo3");
+            let span = document.querySelector("span");
+
+            if (parrafo2.style.display === "none") {
+
+                parrafo2.style.display = "block";
+                parrafo3.style.display = "block";
+                span.innerHTML = "Mostrar menos...";
+
+            } else {
+
+                parrafo2.style.display = "none";
+                parrafo3.style.display = "none";
+                span.innerHTML = "Mostrar más...";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

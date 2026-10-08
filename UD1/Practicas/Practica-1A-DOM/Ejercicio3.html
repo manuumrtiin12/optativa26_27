@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <h1 id = 1>Manuel Martin Fernandez</h1>
+    <button onclick = correcto()>Correcto</button>
+    <button onclick = incorrecto()>Incorrecto</button>
+    
+    <script> 
+
+        function correcto() {
+
+            var titulo = document.getElementById("1");
+            titulo.style.color = "green";
+        }
+
+        function incorrecto() {
+
+            var titulo = document.getElementById("1");
+            titulo.style.color = "red";
+        }
+
+    </script>
+</body>
+</html>
+

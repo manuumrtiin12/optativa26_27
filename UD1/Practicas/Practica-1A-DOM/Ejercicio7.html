@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <p id = "parrafo" >
+        JavaScript es un lenguaje de programación que los desarrolladores
+        utilizan para hacer páginas web interactivas. Desde actualizar fuentes
+        de redes sociales a mostrar animaciones y mapas interactivos, las
+        funciones de JavaScript pueden mejorar la experiencia del usuario de
+        un sitio web. Como lenguaje de scripting del lado del servidor, se
+        trata de una de las principales tecnologías de la World Wide Web.
+    </p>
+
+    <button onclick= aumentar()>Aumentar</button>
+    <button onclick= disminuir()>Disminuir</button>
+
+    <script>
+
+        function disminuir() {
+
+            document.getElementById("parrafo").style.fontSize = "10px";
+
+
+        }
+
+        function aumentar() {
+
+            document.getElementById("parrafo").style.fontSize = "20px";
+        
+        }
+
+    </script>
+    
+</body>
+</html>

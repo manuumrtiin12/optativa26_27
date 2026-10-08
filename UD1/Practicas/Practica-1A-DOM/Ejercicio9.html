@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de la compra</title>
+</head>
+
+<body>
+
+    <h1>LISTA DE LA COMPRA</h1>
+
+    <button onclick="añadirProducto()">Añadir producto</button>
+    <button onclick="actualizarLista()">Actualizar lista</button>
+
+    <div id="lista"></div>
+
+    <script>
+
+        var productos = [];
+
+        function añadirProducto() {
+
+            var productoAñadir = prompt("Dime el producto que quieres añadir:");
+
+            productos.push(productoAñadir);
+        }
+
+
+        function actualizarLista() {
+
+            var lista = document.getElementById("lista");
+
+            lista.innerHTML = "";
+
+            productos.forEach(function(producto) {
+
+                var nombre = document.createElement("span");
+                nombre.innerHTML = producto;
+
+                var botonSi = document.createElement("button");
+                botonSi.innerHTML = "SÍ";
+
+                var botonNo = document.createElement("button");
+                botonNo.innerHTML = "NO";
+
+
+                botonSi.onclick = function() {
+
+                    nombre.style.color = "green";
+                    nombre.style.fontStyle = "italic";
+
+                };
+
+
+                botonNo.onclick = function() {
+
+                    nombre.style.color = "red";
+                    nombre.style.fontWeight = "bold";
+
+                };
+
+
+                lista.appendChild(nombre);
+                lista.appendChild(botonSi);
+                lista.appendChild(botonNo);
+
+                lista.appendChild(document.createElement("br"));
+                lista.appendChild(document.createElement("br"));
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>

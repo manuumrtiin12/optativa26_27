@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+
+<body>
+
+    <div id="productos"></div>
+
+    <script>
+
+        const productos = [
+            {
+                id: 1,
+                nombre: "Patata",
+                precio: 1,
+                imagen: "papas-al-mojo-canarias-arrugadas-papas_79295-6035.jpg"
+            },
+            {
+                id: 2,
+                nombre: "Cebolla",
+                precio: 1.2,
+                imagen: "red-onion-on-a-red-and-white-handkerchief-free-photo.jpg"
+            },
+            {
+                id: 3,
+                nombre: "Calabacin",
+                precio: 2.1,
+                imagen: "calabacin.jpg"
+            },
+            {
+                id: 4,
+                nombre: "Fresas",
+                precio: 0.6,
+                imagen: "IA-fresas.jpg"
+            }
+        ];
+
+
+
+        var estilo = document.createElement("style");
+
+        estilo.innerHTML = `
+            .disabled {
+                background-color: grey;
+                color: white;
+            }
+
+            .enabled {
+                background-color: green;
+                color: white;
+            }
+        `;
+
+        document.getElementsByTagName("head")[0].appendChild(estilo);
+
+
+
+        var contenedor = document.getElementById("productos");
+
+
+
+        productos.forEach(function(producto) {
+
+
+            var nombre = document.createElement("p");
+
+            var textoNombre = document.createTextNode(producto.nombre);
+
+            nombre.appendChild(textoNombre);
+
+
+
+            var precio = document.createElement("p");
+
+            var textoPrecio = document.createTextNode(
+                "Precio: " + producto.precio + " €"
+            );
+
+            precio.appendChild(textoPrecio);
+
+
+
+            var imagen = document.createElement("img");
+
+            imagen.src = "FotosEj10/" + producto.imagen;
+
+            imagen.style.width = "150px";
+
+
+
+            var boton = document.createElement("button");
+
+            var textoBoton = document.createTextNode("Disponible");
+
+            boton.appendChild(textoBoton);
+
+            boton.className = "disabled";
+
+
+
+            boton.onclick = function() {
+
+                if (boton.className == "disabled") {
+
+                    boton.className = "enabled";
+
+                } else {
+
+                    boton.className = "disabled";
+
+                }
+
+            };
+
+
+
+            contenedor.appendChild(nombre);
+
+            contenedor.appendChild(precio);
+
+            contenedor.appendChild(imagen);
+
+            contenedor.appendChild(boton);
+
+            contenedor.appendChild(document.createElement("br"));
+            contenedor.appendChild(document.createElement("br"));
+
+        });
+
+    </script>
+
+</body>
+
+</html>
