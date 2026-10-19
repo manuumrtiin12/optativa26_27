@@ -1,14 +1,14 @@
-class Empleado {
 
-    private nombre : string;
-    private apellidos : string;
-    private edad : number;
-    private fechaDeInicio : Date;
-    private fechaDeFin : Date;
-    private profesion : string;
+class Employee {
 
-    constructor(nombre : string, apellidos : string, edad : number, fechaDeInicio : Date, fechaDeFin : Date, profesion : string) {
+    private nombre: string;
+    private apellidos: string;
+    private edad: number;
+    private fechaDeInicio: Date;
+    private fechaDeFin: Date | null;
+    private profesion: string;
 
+    constructor(nombre: string, apellidos: string, edad: number, fechaDeInicio: Date, fechaDeFin: Date | null, profesion: string) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
@@ -49,11 +49,11 @@ class Empleado {
         this.fechaDeInicio = fechaDeInicio;
     }
 
-    getFechaDeFin(): Date {
+    getFechaDeFin(): Date | null {
         return this.fechaDeFin;
     }
 
-    setFechaDeFin(fechaDeFin: Date): void {
+    setFechaDeFin(fechaDeFin: Date | null): void {
         this.fechaDeFin = fechaDeFin;
     }
 
@@ -64,7 +64,25 @@ class Empleado {
     setProfesion(profesion: string): void {
         this.profesion = profesion;
     }
-
 }
 
-class main()
+const empleado1 = new Employee(
+    "Carlos",
+    "García López",
+    35,
+    new Date("2018-03-12"),
+    new Date("2024-06-30"),
+    "Programador"
+);
+
+const empleado2 = new Employee(
+    "Lucía",
+    "Martínez Pérez",
+    28,
+    new Date("2022-09-01"),
+    null,
+    "Diseñadora"
+);
+
+console.log("Nombre: " + empleado1.getNombre() + ", Edad: " + empleado1.getEdad());
+console.log("Nombre: " + empleado2.getNombre() + ", Edad: " + empleado2.getEdad());
