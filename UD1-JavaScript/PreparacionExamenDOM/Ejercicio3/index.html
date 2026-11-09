@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Repaso DOM</title>
+    <script src="dom_repaso.js"></script>
+    <style>
+        .oculto { display: none; }
+        .destacado { color: darkblue; font-weight: bold; font-size: 1.2em; }
+        .caja { border: 1px solid #aaa; padding: 10px; margin: 10px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Visor de Contenidos Interactivo</h1>
+
+    <div class="caja">
+        <h2>Sección 1: Introducción</h2>
+        <p id="parrafo1">Este es el contenido principal visible de la introducción.</p>
+        <p id="parrafoExtra" class="oculto">Este es el contenido extra que solo se muestra al hacer clic en "Mostrar más".</p>
+        <button id="btnToggle">Mostrar más...</button>
+    </div>
+
+    <button id="btnEstilo">Alternar Estilo Destacado</button>
+</body>
+</html>

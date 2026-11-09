@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Asistencia</title>
+    <style>
+        .presente { color: green; font-weight: bold; }
+        .item-persona { margin: 8px 0; }
+        button { margin-left: 5px; }
+    </style>
+</head>
+<body>
+
+    <script src="asistencia.js"></script>
+
+    <h1>Control de Asistencia</h1>
+    <input type="text" id="nombreInput" placeholder="Nombre del alumno...">
+    <button id="btnAnadir">Registrar Alumno</button>
+
+    <h3>Total inscritos: <span id="contador">0</span></h3>
+    
+    <ul id="listaAlumnos"></ul>
+</body>
+</html>

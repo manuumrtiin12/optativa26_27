@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola que pasa</title>
+</head>
+<body>
+
+    <script>
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+        var dni = prompt("Dime tu dni sin letra");
+
+        if (dni.length == 8 && !isNaN(dni)) {
+            var resto = parseInt(dni) % 23;
+            document.write("<h1>" + dni + letras[resto] + "</h1>");
+        } else {
+            document.write("<h1>DNI no válido</h1>");
+        }
+    </script>
+
+</body>
+</html>
